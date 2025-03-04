@@ -3,12 +3,14 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 
 import authRoutes from './routes/auth-routes';
+import trackRoutes from './routes/track-routes';
 import requireAuth from './middlewares/require-auth';
 
 const app = express();
 
 app.use(bodyParser.json());
 app.use(authRoutes);
+app.use(trackRoutes);
 
 const port = 3000;
 
